@@ -1,0 +1,2 @@
+# PaintByNumbers
+This project is meant to take any image (preferably higher contrast) and turn it into a semi-vectorized template for use as a paint by numbers template. The products from this should include: the template image in the specified dimensions, the template's color palette (the number of colors specified), potentially a configuration panel for absolute color choices (GUI), potentially an ability to vectorize as opposed to reimaging, potentially the ratios of certain paints required to mix each of the colors in the palette
