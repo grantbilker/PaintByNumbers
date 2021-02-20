@@ -1,0 +1,16 @@
+TODO:
+
+-- Edge detection and tracing algorithm (use after noise reduction)
+-- "Blurring" filter, noise reduction, minimum size of area restriction
+-- Create color palette image w/ labels(kmeans.cluster_centers_ reshaped for the pixel)
+-- Draw label number into each area on trace
+-- Configuration and relabel ability for custom cluster centers after learning
+-- Rudimentary GUI to implement entire capability
+-- Website implementation
+-- Implement min and max size and filetype restrictions for input
+-- Launch remixed website
+
+
+Done:
+ -- Import images, image --> array, array -- > image, and save images
+ -- Generic kmeans clustering for quantization of images
