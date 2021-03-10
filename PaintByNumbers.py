@@ -87,8 +87,6 @@ class PixelGroup():
         self.members.extend(pgroup.members)
         pass
     
-    
-    
 
 
 
@@ -183,6 +181,51 @@ def requantize_image_array(blurred_image_array, number_of_colors=24):
     return requantized_image_array
 
 
+
+def min_cluster_reduction(image_array, min_cluster_size=50):
+    
+    # This function will not necessarily eliminate all min clusters
+    # Some unique situations can occur that will render this method useless
+    
+    # Get image_array dimensions
+    height, width, depth = image_array.shape
+    
+    # Initialize an "empty" id array to hold the corresponding PixelGroup uids
+    id_array = np.zeros((height, width, depth))
+    
+    # Hardset the uid in anticipation of the first PixelGroup
+    pgroup_id = 1
+    
+    for i in range(height):
+        
+        
+
+
+# from typing import Dict, Tuple
+
+
+# DELTAS = [(-1,-1), (-1,0), (-1,1), (0,-1), (0,1), (1,-1), (1,0), (1,1)]
+
+# class Picture:
+#     def __init__(self) -> None:
+#         self.value = [[j for j in range(i, i+10)] for i in range(0,100,10)]
+#         self.width = len(self.value)
+#         self.height = len(self.value[0])
+    
+#     def get(self, point: Tuple[int, int]) -> int:
+#         return self.value[point[0]][point[1]]
+    
+#     def in_range(self, point: Tuple[int, int]) -> bool:
+#         return 0 <= point[0] < self.width and 0 <= point[1] < self.height
+    
+#     def neighbors(self, point: Tuple[int, int]) -> Dict[Tuple[int, int], int]:
+#         neighbor_points = map(lambda delta: (point[0] + delta[0], point[1] + delta[1]), DELTAS)
+#         valid_neighbors = filter(lambda p: self.in_range(p), neighbor_points)
+#         return { p: self.get(point) for p in valid_neighbors}
+    
+#     def all_neighbors_same(self, point: Tuple[int, int]) -> bool:
+#         value = self.get(point)
+#         return all(map(lambda v: v == value, self.neighbors(point).values()))
 
 def trace(image_array):
     
